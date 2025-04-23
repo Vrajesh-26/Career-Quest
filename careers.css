@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color:rgb(38, 30, 93);
+    color: white;
+    padding: 20px;
+    height: 60px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.career-categories {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.category {
+    background-color: #2a9df4;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.category:hover {
+    background-color: #1c7cc0;
+}
+
+.career-details, .trending-careers, .career-comparison, .career-quiz {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+button {
+    background-color: #2a9df4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1c7cc0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

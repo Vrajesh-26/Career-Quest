@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same header as index -->
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <header>
+        <!-- Same navigation -->
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-form" id="login-form">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button id="login-button" type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+        </div>
+
+        <div class="auth-form" id="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button id="signup-button" type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Same footer -->
+    </footer>
+
+    <script>
+        function showSignup() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('signup-form').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

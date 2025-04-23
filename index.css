@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box;
+}
+
+/* Header section CSS */
+.navbar{
+    position: sticky;
+    top: 0%;
+    background-color:rgb(38, 30, 93);
+    padding: 1rem;
+
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    
+}
+
+.nav-links{
+
+    display: flex;
+    list-style: none;
+    
+}
+
+.nav-links li a{
+    color:rgb(252, 252, 253);
+    margin-left: 1rem;
+    text-decoration: none;
+    
+    padding: 0.5rem 1rem;
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+#logo{
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 2rem;
+    color: rgba(240, 255, 255, 0.945);
+    
+    border-radius: 18px;
+    padding: 5px;
+}
+#logo{
+    border: 2px solid transparent;
+    border-radius: 5px;
+    
+}
+
+#logo:hover{
+    border: 2px solid white;
+}
+
+
+/* BODY SECTION CSS*/
+
+.hero{
+    background-color:rgb(226, 226, 225);
+    
+    color:dimgrey;
+    font-size: 2rem;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+ 
+
+}
+
+
+
+#getstarted{
+    color: blue;
+    
+}
+
+#heading{
+    color: rgb(1, 0, 5);
+}
+
+/*FEATURE SECTION*/
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #f4f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.footer{
+    background: #3f3f3f;
+    color: #f4f4f4;
+    text-align: center;  
+    padding: 1rem 2rem;
+    bottom: 0%;
+} 
+
+    
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        flex-direction: column;
+        text-align: center;
+       }
+    
+    .nav-links {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+}
+
+
+/*LOGIN CSS*/
+
+.auth-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.auth-form {
+    background: #f4f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+}
+
