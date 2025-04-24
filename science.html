@@ -1,16 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science & Research</title>
+    <title>Science & Research Careers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Science & Research</h1>
-        <p>Information coming soon.</p>
+    <header id="header">
+        <h1 id="heading">SCIENCE & RESEARCH CAREERS</h1>
     </header>
+    
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Research Scientist</h3>
+            <div class="content">
+                Research Scientists conduct experiments to advance scientific knowledge.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Design studies, analyze data, publish findings.</p>
+                    <p><strong>Required Skills:</strong> Analytical skills, attention to detail.</p>
+                    <p><strong>Educational Background:</strong> PhD in relevant field.</p>
+                    <p><strong>Average Salary:</strong> ₹6-20 LPA</p>
+                    <p><strong>Top Employers:</strong> Research institutions, Universities.</p>
+                    <p><strong>Experience Required:</strong> Postdoctoral experience.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Biotechnologist</h3>
+            <div class="content">
+                Biotechnologists use biological processes to develop products.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Research in medicine, agriculture.</p>
+                    <p><strong>Required Skills:</strong> Lab techniques, data analysis.</p>
+                    <p><strong>Educational Background:</strong> B.Sc/M.Sc in Biotechnology.</p>
+                    <p><strong>Average Salary:</strong> ₹4-15 LPA</p>
+                    <p><strong>Top Employers:</strong> Pharma companies, Research labs.</p>
+                    <p><strong>Experience Required:</strong> 1-2 years.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <script src="toggle.js"></script>
+    
 </body>
 </html>
