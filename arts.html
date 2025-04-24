@@ -1,16 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arts & Design</title>
+    <title>Arts & Design Careers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Arts & Design</h1>
-        <p>Information coming soon.</p>
+    <header id="header">
+        <h1 id="heading">ARTS & DESIGN CAREERS</h1>
     </header>
+    
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Graphic Designer</h3>
+            <div class="content">
+                Graphic Designers create visual concepts to communicate ideas.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Develop layouts, logos, illustrations.</p>
+                    <p><strong>Required Skills:</strong> Adobe Creative Suite, typography, color theory.</p>
+                    <p><strong>Educational Background:</strong> Bachelor's in Graphic Design.</p>
+                    <p><strong>Average Salary:</strong> ₹3-12 LPA</p>
+                    <p><strong>Top Employers:</strong> Advertising agencies, Design studios.</p>
+                    <p><strong>Experience Required:</strong> Portfolio most important.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Interior Designer</h3>
+            <div class="content">
+                Interior Designers make spaces functional and beautiful.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Plan spaces, select materials.</p>
+                    <p><strong>Required Skills:</strong> Spatial awareness, CAD software.</p>
+                    <p><strong>Educational Background:</strong> Bachelor's in Interior Design.</p>
+                    <p><strong>Average Salary:</strong> ₹4-15 LPA</p>
+                    <p><strong>Top Employers:</strong> Design firms, Architecture firms.</p>
+                    <p><strong>Experience Required:</strong> 1-3 years.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <script src="toggle.js"></script>
+    
 </body>
 </html>
