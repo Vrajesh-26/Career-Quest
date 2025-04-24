@@ -1,213 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Career Quiz - Career Quest</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <style>
-    body { background-color: #f8f9fa; }
-    .quiz-container { max-width: 700px; margin: 30px auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    .question { margin-bottom: 20px; }
-    .result { margin-top: 30px; padding: 20px; background-color: #e9f7ef; border: 1px solid #d1e7dd; border-radius: 10px; }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-  <div class="container quiz-container">
-    <h1 class="text-center">Career Quiz</h1>
-    <p class="text-center text-muted">Find your ideal career path based on your interests!</p>
+  <div class="container quiz-container animate__animated animate__fadeIn">
+    <div class="quiz-header">
+      <h1>Career Path Finder</h1>
+      <p>Discover your ideal career based on your personality and interests</p>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress">
+        <div class="progress-bar" id="quizProgress" role="progressbar" style="width: 0%"></div>
+      </div>
+    </div>
 
     <form id="careerQuiz">
-      
-    <div class="question">
-      <p>1. What subjects do you enjoy most?</p>
-      <div><input type="radio" name="q1" value="engineering"> Math & Physics</div>
-      <div><input type="radio" name="q1" value="medical"> Biology & Chemistry</div>
-      <div><input type="radio" name="q1" value="business"> Business Studies</div>
-      <div><input type="radio" name="q1" value="arts"> Art & Literature</div>
-      <div><input type="radio" name="q1" value="law"> Civics & Law</div>
-    </div>
-    
-
-    <div class="question">
-      <p>2. How do you prefer solving problems?</p>
-      <div><input type="radio" name="q2" value="engineering"> With Logic</div>
-      <div><input type="radio" name="q2" value="medical"> Practical Actions</div>
-      <div><input type="radio" name="q2" value="business"> Creative Thinking</div>
-      <div><input type="radio" name="q2" value="arts"> Strategic Planning</div>
-      <div><input type="radio" name="q2" value="law"> Legal Reasoning</div>
-    </div>
-    
-
-    <div class="question">
-      <p>3. What motivates you the most?</p>
-      <div><input type="radio" name="q3" value="engineering"> Technology</div>
-      <div><input type="radio" name="q3" value="medical"> Helping Others</div>
-      <div><input type="radio" name="q3" value="business"> Artistic Expression</div>
-      <div><input type="radio" name="q3" value="arts"> Leadership</div>
-      <div><input type="radio" name="q3" value="law"> Justice</div>
-    </div>
-    
-
-    <div class="question">
-      <p>4. What kind of work environment do you prefer?</p>
-      <div><input type="radio" name="q4" value="engineering"> Office Environment</div>
-      <div><input type="radio" name="q4" value="medical"> Hospital or Clinic</div>
-      <div><input type="radio" name="q4" value="business"> Corporate Setting</div>
-      <div><input type="radio" name="q4" value="arts"> Studio or Outdoors</div>
-      <div><input type="radio" name="q4" value="law"> Court or Government Office</div>
-    </div>
-    
-
-    <div class="question">
-      <p>5. Do you enjoy working with data and numbers?</p>
-      <div><input type="radio" name="q5" value="engineering"> Yes, I love data</div>
-      <div><input type="radio" name="q5" value="medical"> Yes, if it's related to health</div>
-      <div><input type="radio" name="q5" value="business"> Only if it's profitable</div>
-      <div><input type="radio" name="q5" value="arts"> Prefer visuals and stories</div>
-      <div><input type="radio" name="q5" value="law"> Only if it's policy-related</div>
-    </div>
-    
-
-    <div class="question">
-      <p>6. Are you more creative or analytical?</p>
-      <div><input type="radio" name="q6" value="engineering"> Very Analytical</div>
-      <div><input type="radio" name="q6" value="medical"> More Hands-on</div>
-      <div><input type="radio" name="q6" value="business"> Balanced</div>
-      <div><input type="radio" name="q6" value="arts"> Highly Creative</div>
-      <div><input type="radio" name="q6" value="law"> Systematic and Logical</div>
-    </div>
-    
-
-    <div class="question">
-      <p>7. How important is job stability for you?</p>
-      <div><input type="radio" name="q7" value="engineering"> Very Important</div>
-      <div><input type="radio" name="q7" value="medical"> Somewhat Important</div>
-      <div><input type="radio" name="q7" value="business"> Neutral</div>
-      <div><input type="radio" name="q7" value="arts"> Prefer Flexibility</div>
-      <div><input type="radio" name="q7" value="law"> Depends on the Job</div>
-    </div>
-    
-
-    <div class="question">
-      <p>8. Would you rather work alone or in a team?</p>
-      <div><input type="radio" name="q8" value="engineering"> Alone</div>
-      <div><input type="radio" name="q8" value="medical"> With Patients</div>
-      <div><input type="radio" name="q8" value="business"> With a Business Team</div>
-      <div><input type="radio" name="q8" value="arts"> With Other Creatives</div>
-      <div><input type="radio" name="q8" value="law"> In a Legal Team</div>
-    </div>
-    
-
-    <div class="question">
-      <p>9. What is your preferred way of learning?</p>
-      <div><input type="radio" name="q9" value="engineering"> Books & Lectures</div>
-      <div><input type="radio" name="q9" value="medical"> Lab Work</div>
-      <div><input type="radio" name="q9" value="business"> Case Studies</div>
-      <div><input type="radio" name="q9" value="arts"> Workshops</div>
-      <div><input type="radio" name="q9" value="law"> Debates</div>
-    </div>
-    
-
-    <div class="question">
-      <p>10. How comfortable are you with technology?</p>
-      <div><input type="radio" name="q10" value="engineering"> Very Comfortable</div>
-      <div><input type="radio" name="q10" value="medical"> Comfortable with Health Tech</div>
-      <div><input type="radio" name="q10" value="business"> Use for Business Only</div>
-      <div><input type="radio" name="q10" value="arts"> Prefer Traditional Tools</div>
-      <div><input type="radio" name="q10" value="law"> Use for Legal Research</div>
-    </div>
-    
-
-    <div class="question">
-      <p>11. Do you enjoy helping people directly?</p>
-      <div><input type="radio" name="q11" value="engineering"> Yes</div>
-      <div><input type="radio" name="q11" value="medical"> Very Much</div>
-      <div><input type="radio" name="q11" value="business"> Occasionally</div>
-      <div><input type="radio" name="q11" value="arts"> Not Really</div>
-      <div><input type="radio" name="q11" value="law"> Only in Advisory</div>
-    </div>
-    
-
-    <div class="question">
-      <p>12. What do you value more: innovation or tradition?</p>
-      <div><input type="radio" name="q12" value="engineering"> Innovation</div>
-      <div><input type="radio" name="q12" value="medical"> Progressive Changes</div>
-      <div><input type="radio" name="q12" value="business"> Profit Growth</div>
-      <div><input type="radio" name="q12" value="arts"> Timeless Art</div>
-      <div><input type="radio" name="q12" value="law"> Protecting Traditions</div>
-    </div>
-    
-
-    <div class="question">
-      <p>13. Are you interested in global issues and sustainability?</p>
-      <div><input type="radio" name="q13" value="engineering"> Strongly Interested</div>
-      <div><input type="radio" name="q13" value="medical"> Health & Environment</div>
-      <div><input type="radio" name="q13" value="business"> Only Economy</div>
-      <div><input type="radio" name="q13" value="arts"> Global Art & Design</div>
-      <div><input type="radio" name="q13" value="law"> Politics & Law</div>
-    </div>
-    
-
-    <div class="question">
-      <p>14. Do you enjoy debates and discussions?</p>
-      <div><input type="radio" name="q14" value="engineering"> Love Debates</div>
-      <div><input type="radio" name="q14" value="medical"> Only Medical Ethics</div>
-      <div><input type="radio" name="q14" value="business"> Business Negotiations</div>
-      <div><input type="radio" name="q14" value="arts"> Art Critique</div>
-      <div><input type="radio" name="q14" value="law"> Legal Arguments</div>
-    </div>
-    
-
-    <div class="question">
-      <p>15. Would you enjoy a physically active job?</p>
-      <div><input type="radio" name="q15" value="engineering"> Yes, Fitness Oriented</div>
-      <div><input type="radio" name="q15" value="medical"> Active in Clinics</div>
-      <div><input type="radio" name="q15" value="business"> Active in Sales/Marketing</div>
-      <div><input type="radio" name="q15" value="arts"> Art Projects</div>
-      <div><input type="radio" name="q15" value="law"> Site Visits or Police Field</div>
-    </div>
-    
-      <div class="text-center">
-        <button type="button" class="btn btn-primary" onclick="calculateCareer()">Submit</button>
+      <!-- 1 -->
+      <div class="question">
+        <p>1. What subjects do you enjoy most?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q1" value="engineering"> Math & Physics
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="medical"> Biology & Chemistry
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="business"> Business Studies
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="arts"> Art & Literature
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="law"> Civics & Law
+          </label>
+        </div>
       </div>
+
+      <!-- 2 -->
+      <div class="question">
+        <p>2. How do you prefer solving problems?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q2" value="engineering"> With Logic
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="medical"> Practical Actions
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="business"> Creative Thinking
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="arts"> Strategic Planning
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="law"> Legal Reasoning
+          </label>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="question">
+        <p>3. What motivates you the most?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q3" value="engineering"> Technology
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="medical"> Helping Others
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="business"> Artistic Expression
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="arts"> Leadership
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="law"> Justice
+          </label>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="question">
+        <p>4. What kind of work environment do you prefer?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q4" value="engineering"> Office Environment
+          </label>
+          <label class="option">
+            <input type="radio" name="q4" value="medical"> Hospital or Clinic
+          </label>
+          <label class="option">
+            <input type="radio" name="q4" value="business"> Corporate Setting
+          </label>
+          <label class="option">
+            <input type="radio" name="q4" value="arts"> Studio or Outdoors
+          </label>
+          <label class="option">
+            <input type="radio" name="q4" value="law"> Court or Government Office
+          </label>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="question">
+        <p>5. Do you enjoy working with data and numbers?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q5" value="engineering"> Yes, I love data
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="medical"> Yes, if it's related to health
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="business"> Only if it's profitable
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="arts"> Prefer visuals and stories
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="law"> Only if it's policy-related
+          </label>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="question">
+        <p>6. Are you more creative or analytical?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q6" value="engineering"> Very Analytical
+          </label>
+          <label class="option">
+            <input type="radio" name="q6" value="medical"> More Hands-on
+          </label>
+          <label class="option">
+            <input type="radio" name="q6" value="business"> Balanced
+          </label>
+          <label class="option">
+            <input type="radio" name="q6" value="arts"> Highly Creative
+          </label>
+          <label class="option">
+            <input type="radio" name="q6" value="law"> Systematic and Logical
+          </label>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="question">
+        <p>7. How important is job stability for you?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q7" value="engineering"> Very Important
+          </label>
+          <label class="option">
+            <input type="radio" name="q7" value="medical"> Somewhat Important
+          </label>
+          <label class="option">
+            <input type="radio" name="q7" value="business"> Neutral
+          </label>
+          <label class="option">
+            <input type="radio" name="q7" value="arts"> Prefer Flexibility
+          </label>
+          <label class="option">
+            <input type="radio" name="q7" value="law"> Depends on the Job
+          </label>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="question">
+        <p>8. Would you rather work alone or in a team?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q8" value="engineering"> Alone
+          </label>
+          <label class="option">
+            <input type="radio" name="q8" value="medical"> With Patients
+          </label>
+          <label class="option">
+            <input type="radio" name="q8" value="business"> With a Business Team
+          </label>
+          <label class="option">
+            <input type="radio" name="q8" value="arts"> With Other Creatives
+          </label>
+          <label class="option">
+            <input type="radio" name="q8" value="law"> In a Legal Team
+          </label>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="question">
+        <p>9. What is your preferred way of learning?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q9" value="engineering"> Books & Lectures
+          </label>
+          <label class="option">
+            <input type="radio" name="q9" value="medical"> Lab Work
+          </label>
+          <label class="option">
+            <input type="radio" name="q9" value="business"> Case Studies
+          </label>
+          <label class="option">
+            <input type="radio" name="q9" value="arts"> Workshops
+          </label>
+          <label class="option">
+            <input type="radio" name="q9" value="law"> Debates
+          </label>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="question">
+        <p>10. How comfortable are you with technology?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q10" value="engineering"> Very Comfortable
+          </label>
+          <label class="option">
+            <input type="radio" name="q10" value="medical"> Comfortable with Health Tech
+          </label>
+          <label class="option">
+            <input type="radio" name="q10" value="business"> Use for Business Only
+          </label>
+          <label class="option">
+            <input type="radio" name="q10" value="arts"> Prefer Traditional Tools
+          </label>
+          <label class="option">
+            <input type="radio" name="q10" value="law"> Use for Legal Research
+          </label>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="question">
+        <p>11. Do you enjoy helping people directly?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q11" value="engineering"> Yes
+          </label>
+          <label class="option">
+            <input type="radio" name="q11" value="medical"> Very Much
+          </label>
+          <label class="option">
+            <input type="radio" name="q11" value="business"> Occasionally
+          </label>
+          <label class="option">
+            <input type="radio" name="q11" value="arts"> Not Really
+          </label>
+          <label class="option">
+            <input type="radio" name="q11" value="law"> Only in Advisory
+          </label>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="question">
+        <p>12. What do you value more: innovation or tradition?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q12" value="engineering"> Innovation
+          </label>
+          <label class="option">
+            <input type="radio" name="q12" value="medical"> Progressive Changes
+          </label>
+          <label class="option">
+            <input type="radio" name="q12" value="business"> Profit Growth
+          </label>
+          <label class="option">
+            <input type="radio" name="q12" value="arts"> Timeless Art
+          </label>
+          <label class="option">
+            <input type="radio" name="q12" value="law"> Protecting Traditions
+          </label>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="question">
+        <p>13. Are you interested in global issues and sustainability?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q13" value="engineering"> Strongly Interested
+          </label>
+          <label class="option">
+            <input type="radio" name="q13" value="medical"> Health & Environment
+          </label>
+          <label class="option">
+            <input type="radio" name="q13" value="business"> Only Economy
+          </label>
+          <label class="option">
+            <input type="radio" name="q13" value="arts"> Global Art & Design
+          </label>
+          <label class="option">
+            <input type="radio" name="q13" value="law"> Politics & Law
+          </label>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="question">
+        <p>14. Do you enjoy debates and discussions?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q14" value="engineering"> Love Debates
+          </label>
+          <label class="option">
+            <input type="radio" name="q14" value="medical"> Only Medical Ethics
+          </label>
+          <label class="option">
+            <input type="radio" name="q14" value="business"> Business Negotiations
+          </label>
+          <label class="option">
+            <input type="radio" name="q14" value="arts"> Art Critique
+          </label>
+          <label class="option">
+            <input type="radio" name="q14" value="law"> Legal Arguments
+          </label>
+        </div>
+      </div>
+
+      <!--  15 -->
+      <div class="question">
+        <p>15. Would you enjoy a physically active job?</p>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q15" value="engineering"> Yes, Fitness Oriented
+          </label>
+          <label class="option">
+            <input type="radio" name="q15" value="medical"> Active in Clinics
+          </label>
+          <label class="option">
+            <input type="radio" name="q15" value="business"> Active in Sales/Marketing
+          </label>
+          <label class="option">
+            <input type="radio" name="q15" value="arts"> Art Projects
+          </label>
+          <label class="option">
+            <input type="radio" name="q15" value="law"> Site Visits or Police Field
+          </label>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary submit-btn" onclick="calculateCareer()">
+        Discover My Career Path
+      </button>
     </form>
 
-    <div id="result" class="result" style="display:none;"></div>
+    <div id="result" class="result" style="display:none;">
+      <h3>Your Recommended Career Paths</h3>
+      <div class="result-content">
+        <div class="career-field" id="primaryField">
+          <h4>Best Match</h4>
+          <ul class="career-list" id="primaryCareers"></ul>
+        </div>
+        <div class="career-field" id="secondaryField" style="display:none;">
+          <h4>Also Consider</h4>
+          <ul class="career-list" id="secondaryCareers"></ul>
+        </div>
+      </div>
+      <button class="restart-btn" onclick="restartQuiz()">Take Quiz Again</button>
+    </div>
   </div>
 
-  <script>
-    function calculateCareer() {
-      const answers = [];
-      for (let i = 1; i <= 15; i++) {
-        const selected = document.querySelector(`input[name='q${i}']:checked`);
-        if (!selected) {
-          alert('Please answer all questions.');
-          return;
-        }
-        answers.push(selected.value);
-      }
-
-      const score = {};
-      answers.forEach(ans => {
-        score[ans] = (score[ans] || 0) + 1;
-      });
-
-      const sorted = Object.entries(score).sort((a, b) => b[1] - a[1]);
-      const careers = {
-        engineering: ['Software Engineer', 'AI Engineer', 'Civil Engineer'],
-        medical: ['Doctor', 'Nurse', 'Pharmacist'],
-        business: ['Business Analyst', 'Marketing Manager', 'Entrepreneur'],
-        arts: ['Graphic Designer', 'Writer', 'Musician'],
-        law: ['Lawyer', 'Judge', 'Legal Advisor']
-      };
-
-      const topField = sorted[0][0];
-      const resultList = careers[topField].map(c => `<li>${c}</li>`).join('');
-      const resultDiv = document.getElementById('result');
-      resultDiv.style.display = 'block';
-      resultDiv.innerHTML = `<h4>Recommended Careers:</h4><ul>${resultList}</ul>`;
-    }
-  </script>
+  <script src="quiz.js"></script>
 </body>
 </html>
