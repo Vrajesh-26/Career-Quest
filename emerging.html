@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Emerging Careers</h1>
-        <p>Information coming soon.</p>
+    <header id="header">
+        <h1 id="heading">EMERGING CAREERS</h1>
     </header>
+    
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Blockchain Developer</h3>
+            <div class="content">
+                Blockchain Developers create decentralized applications.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Develop smart contracts, DApps.</p>
+                    <p><strong>Required Skills:</strong> Solidity, cryptography, Web3.js.</p>
+                    <p><strong>Educational Background:</strong> CS with blockchain courses.</p>
+                    <p><strong>Average Salary:</strong> ₹10-40 LPA</p>
+                    <p><strong>Top Employers:</strong> Crypto startups, Fintech companies.</p>
+                    <p><strong>Experience Required:</strong> 1-3 years in blockchain.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Virtual Reality Developer</h3>
+            <div class="content">
+                VR Developers create immersive virtual experiences.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Design VR environments.</p>
+                    <p><strong>Required Skills:</strong> Unity/Unreal Engine, 3D modeling.</p>
+                    <p><strong>Educational Background:</strong> CS/Game Design degree.</p>
+                    <p><strong>Average Salary:</strong> ₹8-25 LPA</p>
+                    <p><strong>Top Employers:</strong> Game studios, Tech companies.</p>
+                    <p><strong>Experience Required:</strong> VR project portfolio.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <script src="toggle.js"></script>
+    
 </body>
 </html>
