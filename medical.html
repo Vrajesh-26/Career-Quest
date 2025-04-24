@@ -1,16 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical & Healthcare</title>
+    <title>Medical & Healthcare Careers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Medical & Healthcare</h1>
-        <p>Information coming soon.</p>
+    <header id="header">
+        <h1 id="heading">MEDICAL & HEALTHCARE CAREERS</h1>
     </header>
+    
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Doctor (General Physician)</h3>
+            <div class="content">
+                General Physicians diagnose and treat illnesses and health conditions.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Examine patients, order tests, make diagnoses.</p>
+                    <p><strong>Required Skills:</strong> Medical knowledge, diagnostic skills, patient care.</p>
+                    <p><strong>Educational Background:</strong> MBBS degree + MD specialization.</p>
+                    <p><strong>Average Salary:</strong> ₹8-30 LPA</p>
+                    <p><strong>Top Employers:</strong> Hospitals, Clinics, Healthcare centers.</p>
+                    <p><strong>Experience Required:</strong> 5+ years including residency.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <section class="fields">
+        <div class="specific-field">
+            <h3 class="title">Surgeon</h3>
+            <div class="content">
+                Surgeons perform operations to treat diseases and injuries.
+                <span class="dots">...</span>
+                <div class="more-content">
+                    <p><strong>Job Description:</strong> Perform surgical procedures, monitor recovery.</p>
+                    <p><strong>Required Skills:</strong> Surgical skills, precision, stamina.</p>
+                    <p><strong>Educational Background:</strong> MBBS + MS in Surgery.</p>
+                    <p><strong>Average Salary:</strong> ₹15-50 LPA</p>
+                    <p><strong>Top Employers:</strong> Hospitals, Specialty clinics.</p>
+                    <p><strong>Experience Required:</strong> 5+ years post specialization.</p>
+                </div>
+            </div>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+    </section>
+
+    <script src="toggle.js"></script>
 </body>
 </html>
